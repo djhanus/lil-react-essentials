@@ -12,6 +12,7 @@ function App() {
         <p>
           Welcome to project lift off!!
         </p>
+
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -20,7 +21,7 @@ function App() {
         >
           Learn React
         </a>
-        <h1>Project Lift Off</h1>
+        
         <h2>Subheading Example</h2>
         <p>This is a paragraph with some additional text to demonstrate basic markup.</p>
         <ul>
@@ -28,11 +29,6 @@ function App() {
           <li>Second item</li>
           <li>Third item</li>
         </ul>
-        <ol>
-          <li>Ordered item one</li>
-          <li>Ordered item two</li>
-          <li>Ordered item three</li>
-        </ol>
         <blockquote>
           "This is a blockquote example to showcase styled text."
         </blockquote>
