@@ -1,34 +1,49 @@
 
 import './App.css';
-
+import imgLogo from './batleth.jpg';
+import imgFeature from './Kahless.jpg';
 
 function Header(props) {
-  // console.log(props)
   return (
     <header>
-      <h1>{props.name} Kazooie</h1>
+      <h1>{props.name}</h1>
+      <img
+        src={imgLogo}
+        alt="batleth"
+        height={75}
+      />
+      <p style={{ fontSize: "small", fontStyle: "italic" }}>Location: 1 Warrior's Way, First City, Qo'noS</p>
+      <p style={{ fontSize: "small", fontStyle: "italic" }}>Contact: +47 123 456 789</p>
     </header>
-  );
+    );
 }
 
 function Main(props) {
   return (
-    <section>
+    <section style={{ maxWidth: "1080px", margin: "0 auto" }}><h2>About Us</h2>
+      <img
+        src={imgFeature}
+        alt="Kahless the Unforgettable"
+        width={500}
+      />
+      <p>Our founder, Kahless the Unforgettable, created the first bat'leth and united the Klingon people. We honor his memory by serving the finest Klingon cuisine in the galaxy.</p>
+      <p>Our restaurant is family-owned and operated, and we take great pride in our warrior spirit and our commitment to honor and tradition.</p>
+      <h2>Our Menu</h2>
+      <p>Qapla'! Welcome to the Klingon Restaraunt, where we serve the finest {props.adjective} Klingon cuisine in the galaxy.</p>
       <p>Welcome to Qo'noS's finest dining establishment, where honor meets flavor. Our chefs prepare traditional Klingon delicacies that will ignite your warrior spirit and satisfy your hunger for glory.</p>
       <p>Our {props.adjective} dishes include:</p>
-      <ul style={{ textAlign: "left" }}>
+      <ul style={{ textAlign: "center", listStyleType: "none", padding: 0 }}>
       {props.dishes.map((gagh) => (
-        <li key={gagh.id}>{gagh.title}</li>
-      ))}
+      <li key={gagh.id} style={{ textAlign: "center", fontSize: "larger", fontStyle: "italic", fontWeight: "bold" }}>{gagh.title}</li>))}
       </ul>
     </section>
-  );
+    );
 }
 
-function Footerios(props) {
+function Footer(props) {
   return (
     <section>
-      <p>@ {props.yearrr}</p>
+      <p>@ {props.year}</p>
     </section>
     );
 }
@@ -41,7 +56,7 @@ const dishes = [
 ];
 
 const allGaghDishes = dishes.map((gagh, i) => ({ id: i, title: gagh }));
-console.log(allGaghDishes);
+// console.log(allGaghDishes);
 
 function App() {
   return (
@@ -49,7 +64,7 @@ function App() {
       <Header name="Gak'tok, Son of Kahless, Keeper of the Sacred Bat'leth" />
       {/* return objects instead of array of strings */}
       <Main adjective="delicious" dishes={allGaghDishes}/>
-      <Footerios yearrr={new Date().getFullYear()}/>
+      <Footer year={new Date().getFullYear()}/>
     </div>
     );
 }
