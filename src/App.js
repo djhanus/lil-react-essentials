@@ -1,38 +1,37 @@
-import logo from './logo.svg';
+
 import './App.css';
+
+
+function Header() {
+  return (
+    <header>
+      <h1>Banjo Kazooie</h1>
+    </header>
+  );
+}
+
+function Main() {
+  return (
+    <section>
+      <p>Gruntilda's Lair, Spiral Mountain, Click Clock Wood, Bubblegloop Swamp, Treasure Trove Cove.</p>
+    </section>
+    );
+}
+
+function Footerios() {
+  return (
+    <section>
+      <p>@ This is the footer</p>
+    </section>
+    );
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          Welcome to project lift off!!
-        </p>
-
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        
-        <h2>Subheading Example</h2>
-        <p>This is a paragraph with some additional text to demonstrate basic markup.</p>
-        <ul>
-          <li>First item</li>
-          <li>Second item</li>
-          <li>Third item</li>
-        </ul>
-        <blockquote>
-          "This is a blockquote example to showcase styled text."
-        </blockquote>
-      </header>
+      <Header />
+      <Main />
+      <Footerios />
     </div>
   );
 }
