@@ -3,6 +3,7 @@ import './App.css';
 import imgLogo from './batleth.jpg';
 import imgFeature from './Kahless.jpg';
 
+// Header component: Displays the restaurant's name, logo, and contact information
 function Header(props) {
   return (
     <header>
@@ -18,9 +19,11 @@ function Header(props) {
     );
 }
 
+// Main component: Displays the restaurant's about section, menu, and featured image
 function Main(props) {
   return (
-    <section style={{ maxWidth: "1080px", margin: "0 auto" }}><h2>About Us</h2>
+    <section style={{ maxWidth: "1080px", margin: "0 auto" }}>
+      <h2>About Us</h2>
       <img
         src={imgFeature}
         alt="Kahless the Unforgettable"
@@ -40,6 +43,7 @@ function Main(props) {
     );
 }
 
+// Footer component: Displays the current year
 function Footer(props) {
   return (
     <section>
@@ -48,6 +52,7 @@ function Footer(props) {
     );
 }
 
+// Array of dishes: Maps dish names to objects with id and title properties
 const dishes = [
   "Red Worms",
   "Silver Worms",
@@ -56,13 +61,12 @@ const dishes = [
 ];
 
 const allGaghDishes = dishes.map((gagh, i) => ({ id: i, title: gagh }));
-// console.log(allGaghDishes);
 
+// App component: Combines Header, Main, and Footer components into the main application
 function App() {
   return (
     <div className="App">
       <Header name="Gak'tok, Son of Kahless, Keeper of the Sacred Bat'leth" />
-      {/* return objects instead of array of strings */}
       <Main adjective="delicious" dishes={allGaghDishes}/>
       <Footer year={new Date().getFullYear()}/>
     </div>
