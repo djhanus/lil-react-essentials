@@ -9,8 +9,3 @@ root.render(
     <App login="djhanus"/>
   </>
 );
-
-// ReactDOM.render(
-//   <App login="djhanus"/>,
-//   document.getElementById('root')
-// );
