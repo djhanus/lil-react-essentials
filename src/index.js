@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-// const [,, light] = ["boots", "tent", "headlamp", "map"];
-// console.log(light)
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <App/>
+    <App login="djhanus"/>
   </>
 );
+
+// ReactDOM.render(
+//   <App login="djhanus"/>,
+//   document.getElementById('root')
+// );
