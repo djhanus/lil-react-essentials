@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link, useLocation } from "react-router-dom";
 
 export function Home() {
     return (
@@ -41,9 +41,11 @@ export function Contact() {
 }
 
 export function Whoops404() {
+    let location = useLocation();
+    console.log(location);
     return (
         <div>
-            <h1>Whoops, page/route not found</h1>
+            <h1>Resource not found at {location.pathname}</h1>
         </div>
     );
 }
