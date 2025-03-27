@@ -15,7 +15,12 @@ function App() {
   }, []);
 
   if(data) {
-    return <div>{JSON.stringify(data)}</div>
+    return (<div>
+      <h1>{data.name}</h1>
+      <h1>{data.blog}</h1>
+      <p>{data.location}</p>
+      <img alt={data.login} src={data.avatar_url} />
+    </div>);
   }
 
   return <div>No user available -- !!</div>;
